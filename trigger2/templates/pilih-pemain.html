@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Peminjaman Stadium</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% include 'navbar/navbar-manajer.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4">
+                    <h2 class="fw-bold mb-2 text-uppercase">Pilih Pemain</h2>
+                    <p class="text-black-50 mb-5">Pilih pemain yang tersedia untuk masuk ke tim Anda</p>
+                    <div class="dropdown-center">
+
+                      <form method="POST" action="">
+                        <form method="POST" action="">
+                          <div class="form-group">
+                            <select class="form-control" id="pilihPelatih">
+                              <option disabled selected value="">Pilih pemain yang ingin didaftarkan</option>                            
+                              <option>John Doe - Kiper</option>
+                              <option>Doe John - Bek kiri</option>
+                              <option>Radit A - Bek kanan</option>
+                              <option>Arya DK - Penyerang</option>
+                              <option>Daffa F - Sayap kanan</option>
+                              <option>Jingga M - Sayap kiri</option>
+                            </select>
+                          </div>
+                          <br>
+                          <a class="btn btn-outline-secondary mt-5" href="{% url 'trigger2:mengelola-tim' %}" value="kembali">Kembali</a>
+                        <button class="btn btn-primary mt-5" type="submit" value="Submit">Submit</button>
+                      </form>
+
+                        <!-- pake dropdown styled-->
+                        <!-- <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown-button">
+                            Pilih pemain yang ingin didaftarkan
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdown-button">
+                            <li><a class="dropdown-item" href="#">John Doe - Striker</a></li>
+                            <li><a class="dropdown-item" href="#">Doe John - Kiper</a></li>
+                            <li><a class="dropdown-item" href="#" >Radit A - Bek kiri</a></li>
+                            <li><a class="dropdown-item" href="#">Arya DK - Bek kanan</a></li>
+                            <li><a class="dropdown-item" href="#">Daffa F - Striker</a></li>
+                            <li><a class="dropdown-item" href="#">Jingga M - Bek kiri</a></li>
+                          </ul>
+                        </div>
+                        <br>
+                        <a class="btn btn-outline-secondary mt-5" href="{% url 'trigger2:mengelola-tim' %}" value="kembali">Kembali</a>
+                        <button class="btn btn-primary mt-5" type="submit" value="Submit">Submit</button>
+                      </form>
+                      
+                  </div> -->
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+                    
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
+  {% endblock content %}

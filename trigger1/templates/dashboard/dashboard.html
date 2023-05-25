@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    {% include 'navbar/navbar.html' %}
+{% endblock meta %}
+
+{% block content %}
+
+<body onload="document.getElementById('profil-link').click()">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+    </symbol>
+    <symbol id="grid" viewBox="0 0 16 16">
+      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"></path>
+    </symbol>
+  </svg>
+<section class="d-flex align-items-start">
+<!--sidebar-->
+<div class="px-5 mt-5">
+<div class="col-sm-4 card d-flex flex-column flex-shrink-0 p-3" style="width: 280px; border-radius: 15px;">
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a href="#profil" class="nav-link" onclick="showContent('profil')" id="profil-link">
+        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+        profile
+      </a>
+    </li>
+    <hr></hr>
+    <li>
+      <a href="#tim" class="nav-link" onclick="showContent('tim')" id="tim-link">
+        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+        managed team
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+<!--card content-->
+<div class="mask col-sm-8 d-flex align-items-center">
+  <div class="container h-100 w-100">
+    <div class="row d-flex justify-content-center align-items-center h-100 mt-5">
+      <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+            <div class="mb-md-4" id="profil">
+
+                <h2 class="fw-bold mb-2 text-center">Your Profile</h2>
+                <p class="text-black-50 mb-5 text-center">Profil Anda</p>
+                <p class="text-black-50 mb-2 fw-bold">Nama Depan </p>
+                <p class="text-black-50 mb-2">Jingga </p>
+                <p class="text-black-50 mb-2 fw-bold">Nama Belakang </p>
+                <p class="text-black-50 mb-2">Mentari </p>
+                <p class="text-black-50 mb-2 fw-bold">Nomor HP </p>
+                <p class="text-black-50 mb-2">08123456789 </p>
+                <p class="text-black-50 mb-2 fw-bold">Email </p>
+                <p class="text-black-50 mb-2">vladijm@gmail.com </p>
+                <p class="text-black-50 mb-2 fw-bold">Alamat </p>
+                <p class="text-black-50 mb-2">Jl. Wortel A1/23 BSD </p>
+                <p class="text-black-50 mb-2 fw-bold">Status </p>
+                <p class="text-black-50 mb-2">Manajer </p>
+
+            </div>
+            <div class="mb-md-4 mt-md-4" id="tim">
+              <h2 class="fw-bold mb-2 text-center">Your Team</h2>
+              <p class="text-black-50 mb-5 text-center">Tim yang Anda kelola</p>
+              <p class="text-black-50 mb-2 fw-bold">Nama Tim </p>
+                <p class="text-black-50 mb-2">UI FC </p>
+                <p class="text-black-50 mb-2 fw-bold">Universitas </p>
+                <p class="text-black-50 mb-2">Universitas Indonesia </p>
+              
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</body>
+
+{% block scripts %}
+<script>
+    const profilLink = document.getElementById('profil-link');
+    const timLink = document.getElementById('tim-link');
+    const profilContent = document.getElementById('profil');
+    const timContent = document.getElementById('tim');
+
+    profilLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        timContent.style.display = 'none';
+        profilContent.style.display = 'block';
+    });
+
+    timLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        profilContent.style.display = 'none';
+        timContent.style.display = 'block';
+    });
+</script>
+{% endblock %}
+
+
+{% include 'footer.html' %}
+{% endblock content %}

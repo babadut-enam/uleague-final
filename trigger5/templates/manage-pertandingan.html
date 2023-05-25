@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Manage Pertandingan</title>
+    <link rel="stylesheet" href="{% static 'css/manage_pertandingan.css' %}">
+    {% include 'navbar/navbar-panitia.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-9 col-xl-9">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4">
+                    <h2 class="fw-bold mb-2 text-uppercase">List Pertandingan</h2>
+
+                    <!-- <h2 class="fw-bold mb-2 text-uppercase">PERTANDINGAN BELUM LENGKAP!</h2>
+                    <h4 class="fw-bold mb-2 text-uppercase">KLIK TOMBOL NEXT UNTUK MEMBUAT PERTANDINGAN</h2>
+                    <a class="btn btn-outline-secondary mt-5" href="{}" type="button" value="Next">Next</a> -->
+
+                    <div id="tableCarousel" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                          <!-- Case: babak pertama -->
+                         <div class="carousel-item active"> 
+                          <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                  <th colspan="5">LIST PERTANDINGAN GRUP STAGE</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><b>Grup</b></td>
+                                  <td><b>Tim</b></td>
+                                  <td><b>Waktu</b></td>
+                                  <td><b>Pemenang</b></td>
+                                  <td><b>Action</b></td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="2" style="vertical-align : middle;text-align:center;">A</td>
+                                  <td>UI FC VS UGM FC</td>
+                                  <td>1 Mei 2023</td>
+                                  <td>UGM FC</td>
+                                  <td>
+                                    <button type="button" class="btn btn-secondary btn-sm">Peristiwa Tim 1</button>
+                                    <button type="button" class="btn btn-secondary btn-sm">Peristiwa Tim 2</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>ITB FC VS BINUS FC</td>
+                                  <td>3 Mei 2023</td>
+                                  <td>BINUS FC</td>
+                                  <td>
+                                    <button type="button" class="btn btn-secondary btn-sm btn-block">Peristiwa Tim 1</button>
+                                    <button type="button" class="btn btn-secondary btn-sm btn-block">Peristiwa Tim 2</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="3" style="vertical-align : middle;text-align:center;">B</td>
+                                  <td>UNAIR FC VS UNDIP FC</td>
+                                  <td>[Waktu Dimulai -5 Menit]</td>
+                                  <td>-</td>
+                                  <td>
+                                    <button type="button" class="btn btn-success btn-sm btn-block">Mulai</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>UNPAD FC VS ITS FC</td>
+                                  <td>7 Mei 2023</td>
+                                  <td>-</td>
+                                  <td>Belum Waktunya</td>
+                                </tr>
+                                <tr>
+                                  <td>UB FC VS UPH FC</td>
+                                  <td>9 Mei 2023</td>
+                                  <td>-</td>
+                                  <td>Belum Waktunya</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                         </div>
+                         <!-- Case: belum set semua waktu pertandingan -->
+                         <div class="carousel-item">
+                          <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                  <th colspan="5">LIST PERTANDINGAN GRUP STAGE</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><b>Grup</b></td>
+                                  <td><b>Tim</b></td>
+                                  <td><b>Waktu</b></td>
+                                  <td><b>Pemenang</b></td>
+                                  <td><b>Action</b></td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="2" style="vertical-align : middle;text-align:center;">A</td>
+                                  <td>UI FC VS UGM FC</td>
+                                  <td>1 Mei 2023</td>
+                                  <td>-</td>
+                                  <td>
+                                    <button type="button" class="btn btn-secondary btn-sm">Update</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>ITB FC VS BINUS FC</td>
+                                  <td>-</td>
+                                  <td>-</td>
+                                  <td>
+                                    <button type="button" class="btn btn-secondary btn-sm">Update</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="3" style="vertical-align : middle;text-align:center;">B</td>
+                                  <td>UNAIR FC VS UNDIP FC</td>
+                                  <td>-</td>
+                                  <td>-</td>
+                                  <td>
+                                    <button type="button" class="btn btn-secondary btn-sm">Update</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>UNPAD FC VS ITS FC</td>
+                                  <td>-</td>
+                                  <td>-</td>
+                                  <td>
+                                    <button type="button" class="btn btn-secondary btn-sm">Update</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>UB FC VS UPH FC</td>
+                                  <td>-</td>
+                                  <td>-</td>
+                                  <td>
+                                    <button type="button" class="btn btn-secondary btn-sm">Update</button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                          </table>
+                         </div>
+                         <!-- Case: Sudah ada pemenang akhir -->
+                         <div class="carousel-item">
+                          <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                  <th colspan="5">LIST PERTANDINGAN FINAL</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><b>Tim</b></td>
+                                  <td><b>Waktu</b></td>
+                                  <td><b>Pemenang</b></td>
+                                  <td><b>Action</b></td>
+                                </tr>
+                                <tr>
+                                  <td>UGM FC VS BINUS FC</td>
+                                  <td>1 Juni 2023</td>
+                                  <td>UGM FC</td>
+                                  <td>
+                                    <button type="button" class="btn btn-secondary btn-sm">Peristiwa Tim 1</button>
+                                    <button type="button" class="btn btn-secondary btn-sm">Peristiwa Tim 2</button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                            <h4 class="fw-bold mb-2 mt-5 text-uppercase">INI AKHIR MUSIM!</h2>
+                            <h4 class="fw-bold mb-2 text-uppercase">KLIK TOMBOL NEXT UNTUK MEMBUAT PERTANDINGAN BARU</h2>
+                            <a class="btn btn-outline-secondary mt-2" href="{}" type="button" value="Next">Next</a>
+                         
+                          </div>
+                      </div>
+                   </div>
+                </div>
+                  <a class="carousel-control-prev align-self-end" href="#tableCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                  </a>
+                  <a class="carousel-control-next align-self-end" href="#tableCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="{% static 'js/manage_pertandingan.js' %}"></script>
+  {% include 'footer.html' %}
+  {% endblock content %}

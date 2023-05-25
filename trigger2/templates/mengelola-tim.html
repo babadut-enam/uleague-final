@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Peminjaman Stadium</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% include 'navbar/navbar-manajer.html' %}
+{% endblock meta %}
+
+{% block content %}
+<!-- kalau belum ada tim -->
+<!-- <section class="vh-100 bg-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+
+              <div class="mb-md-5 mt-md-4">
+                  <h2 class="fw-bold mb-2 text-center">Form Registrasi</h2>
+                  <p class="text-black-50 mb-5 text-center">Daftarkan tim yang akan Anda kelola</p>
+
+                  <form method="POST" action="">
+                    <div class="form-group">
+                      <label for="formGroupNamaTim">Nama Tim</label>
+                      <br>
+                      <input type="text" class="form-control" id="formGroupNamaTim" placeholder="FC UI">
+                    </div>
+                    <div class="form-group mt-4">
+                      <label for="formGroupNamaUniv">Nama Universitas</label>
+                      <br>
+                      <input type="text" class="form-control" id="formGroupNamaUniv" placeholder="Universitas Indonesia">
+                    </div>
+                    <button class="btn btn-outline-secondary mt-5 mx-auto d-block" type="submit" value="Submit">Submit</button>
+                  </form>                             
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- kalau udah ada tim -->
+
+<section class="vh-100">
+    <div class="mask d-flex align-items-center mt-4">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4">
+                    <h2 class="fw-bold mb-2 text-center">Tim</h2>
+              <p class="text-black-50 mb-3 text-center">Tim yang Anda kelola</p>
+              <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th colspan="8" class="text-center">UI FC</th>
+                  </tr>
+                </thead>
+                <thead>
+                  <tr>
+                    <th colspan="8" class="text-center">Pemain</th>
+                  </tr>
+                </thead>
+                  <thead>
+                  <tr>
+                    <th>Nama Pemain</th>
+                    <th>No HP</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Is Captain</th>
+                    <th>Posisi</th>
+                    <th>NPM</th>
+                    <th>Jenjang</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>08123456789</td>
+                    <td>01/01/1990</td>
+                    <td>Yes</td>
+                    <td>Kiper</td>
+                    <td>2106635631</td>
+                    <td>S1</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Make Captain</button>
+                      <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>08123456789</td>
+                    <td>01/01/1990</td>
+                    <td>No</td>
+                    <td>Bek kiri</td>
+                    <td>2106635631</td>
+                    <td>S1</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Make Captain</button>
+                      <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>08123456789</td>
+                    <td>01/01/1990</td>
+                    <td>No</td>
+                    <td>Striker</td>
+                    <td>2106635631</td>
+                    <td>S1</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Make Captain</button>
+                      <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+                  </tr>
+                <thead>
+                  <tr>
+                    <th colspan="8" class="text-center">Pelatih</th>
+                  </tr>
+                </thead>
+                <thead>
+                  <tr>
+                    <th>Nama Pelatih</th>
+                    <th>No HP</th>
+                    <th>Email</th>
+                    <th colspan="3">Alamat</th>
+                    <th>Spesialisasi</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tr>
+                    <td>Radit Doe</td>
+                    <td>08123456789</td>
+                    <td>johndoe@gmail.com</td>
+                    <td colspan="3">Jl Beji A2/21 Kota Depok, Jawa Barat</td>
+                    <td>Teknik</td>
+                    <td>
+                      <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+                  </tr>
+              </table>
+              <p class="text-black-50 mb-3 text-center">Tambahkan Pemain/Pelatih</p>
+              <a class="btn btn-outline-secondary" href="{% url 'trigger2:pilih-pelatih' %}" type="button" value="+Pelatih">+ Pelatih</a> 
+              <a class="btn btn-outline-secondary" href="{% url 'trigger2:pilih-pemain' %}" type="button" value="+Pemain">+ Pemain</a> 
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
+  {% endblock content %}

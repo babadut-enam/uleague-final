@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>History Rapat</title>
+    <link rel="stylesheet" href="">
+    {% include 'navbar/navbar-manajer.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4">
+                    <h2 class="fw-bold mb-2 text-uppercase">List Rapat</h2>
+                    <p class="text-black-50 mb-5">Daftar rapat yang akan berlangsung</p>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rapat Tim</th>
+                                <th scope="col">Nama Panitia</th>
+                                <th scope="col">Stadium</th>
+                                <th scope="col">Tanggal dan Waktu</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UI FC vs UGM FC</td>
+                                <td>Ujang</td>
+                                <td>Gelora Bung Karno</td>
+                                <td>1 Mei 2023, 19.00</td>
+                                <td>
+                                    <a href="">Lihat Laporan Rapat</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ITB FC vs BINUS FC</td>
+                                <td>Udin</td>
+                                <td>Bandung Lautan Api</td>
+                                <td>3 Mei 2023, 19.00</td>
+                                <td>
+                                    <a href="">Lihat Laporan Rapat</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UNAIR FC vs UNDIP FC</td>
+                                <td>Udin</td>
+                                <td>Bandung Lautan Api</td>
+                                <td>5 Mei 2023, 19.00</td>
+                                <td>
+                                    <a href="">Lihat Laporan Rapat</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UNPAD FC vs ITS FC</td>
+                                <td>Udin</td>
+                                <td>Pakansari</td>
+                                <td>7 Mei 2023, 19.00</td>
+                                <td>
+                                    <a href="">Lihat Laporan Rapat</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UB FC vs UPH FC</td>
+                                <td>Udin</td>
+                                <td>Pakansari</td>
+                                <td>9 Mei 2023, 19.00</td>
+                                <td>
+                                    <a href="">Lihat Laporan Rapat</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src=""></script>
+  {% include 'footer.html' %}
+  {% endblock content %}

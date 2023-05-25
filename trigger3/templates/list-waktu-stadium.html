@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Peminjaman Stadium</title>
+    <link rel="stylesheet" href="{% static 'css/peminjaman_stadium.css' %}">
+    {% include 'navbar/navbar-manajer.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4">
+                    <h2 class="fw-bold mb-2 text-uppercase">List Waktu Stadium {{data.stadium}}</h2>
+                    <p class="text-black-50 mb-5">Daftar waktu stadium tersedia</p>
+                    <form method="POST" class="px-5 py-3">
+                    {% csrf_token %}
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                            <th scope="col">List Waktu</th>
+                            <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          {% for waktu in data.waktu %}
+                            <tr>
+                              <td>{{ waktu.0 }} - {{ waktu.1 }}</td>
+                              <td>
+                                <button type="submit" name="waktu" value="{{ waktu }}">Pesan</button>
+                              </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src=""></script>
+  {% include 'footer.html' %}
+  {% endblock content %}

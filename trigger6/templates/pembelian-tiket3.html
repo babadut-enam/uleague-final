@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Form Pembelian Tiket</title>
+    <link rel="stylesheet" href="{% static 'css/peminjaman_stadium.css' %}">
+    {% include 'navbar/navbar-penonton.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4">
+                    <h2 class="fw-bold mb-2 text-uppercase">Pilih Pertandingan</h2>
+                    <p class="text-black-50 mb-5">Gelora Bung Karno | 13 April 2023 | 15.30 - 17.30</p>
+                    <form method="POST" action="">
+                    <table class="table table-hover">
+                        <thead>
+                            <p><b>List Pertandingan</b></p>
+                            <tr>
+                            <th scope="col">Tim 1</th>
+                            <th scope="col">Tim 2</th>
+                            <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>BINUS FC</td>
+                              <td>UGM FC</td>
+                            <td>
+                              <a class="btn btn-outline-secondary mt-5" href="{% url 'trigger6:pembelian_tiket4' %}" value="Pilih1">Pilih</a>
+                            </td>
+                            </tr>
+                            <tr>
+                              <td>ITB FC</td>
+                              <td>UNAIR FC</td>
+                            <td>
+                              <a class="btn btn-outline-secondary mt-5" href="{% url 'trigger6:pembelian_tiket4' %}" value="Pilih2">Pilih</a>
+                            </td>
+                            </tr>
+                            <tr>
+                              <td>UNDIP FC</td>
+                              <td>ITS FC</td>
+                            <td>
+                              <a class="btn btn-outline-secondary mt-5" href="{% url 'trigger6:pembelian_tiket4' %}" value="Pilih3">Pilih</a>
+                            </td>
+                            </tr>
+                            <tr>
+                        </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+  {% include 'footer.html' %}
+  {% endblock content %}

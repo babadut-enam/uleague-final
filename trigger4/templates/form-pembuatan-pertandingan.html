@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Form Peminjaman Stadium</title>
+    <link rel="stylesheet" href="">
+    {% include 'navbar/navbar-panitia.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4 pb-5">
+
+                    <h2 class="fw-bold mb-4 text-uppercase">BUAT PERTANDINGAN</h2>
+                    <form method="POST" action="">
+                    <div class="form-group mt-4 d-flex justify-content-start">
+                        <label for="wasit-utama">Pilih Wasit Utama:</label>
+                        <select class="form-control" id="pilihWasitUtama">
+                            <option disabled selected value="">Pilih Wasit</option>                            
+                            <option>Gelora Bung Karno</option>
+                            <option>Bandung Lautan Api</option>
+                            <option>Pakansari</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-4 d-flex justify-content-start">
+                        <label for="wasit-pembantu-1">Pilih Wasit Pembantu/Hakim Garis:</label>
+                        <select class="form-control" id="pilihWasitPembantu1">
+                            <option disabled selected value="">Pilih Wasit</option>                            
+                            <option>Gelora Bung Karno</option>
+                            <option>Bandung Lautan Api</option>
+                            <option>Pakansari</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-4 d-flex justify-content-start">
+                        <label for="wasit-pembantu-2">Pilih Wasit Pembantu/Hakim Garis:</label>
+                        <select class="form-control" id="pilihWasitPembantu2">
+                            <option disabled selected value="">Pilih Wasit</option>                            
+                            <option>Gelora Bung Karno</option>
+                            <option>Bandung Lautan Api</option>
+                            <option>Pakansari</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-4 d-flex justify-content-start">
+                        <label for="wasit-cadangan">Pilih Wasit Cadangan:</label>
+                        <select class="form-control" id="pilihWasitCadangan">
+                            <option disabled selected value="">Pilih Wasit</option>                            
+                            <option>Gelora Bung Karno</option>
+                            <option>Bandung Lautan Api</option>
+                            <option>Pakansari</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group mt-4">
+                        <table class="table table-hover">
+                          <tbody>
+                            <tr>
+                              <td><b>Tim 1</b></td>
+                              <td><b>Tim 2</b></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <select class="form-control" id="pilihTim1">
+                                    <option disabled selected value="">Pilih Tim</option>                            
+                                    <option>Gelora Bung Karno</option>
+                                    <option>Bandung Lautan Api</option>
+                                    <option>Pakansari</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select class="form-control" id="pilihTim2">
+                                    <option disabled selected value="">Pilih Tim</option>                            
+                                    <option>Gelora Bung Karno</option>
+                                    <option>Bandung Lautan Api</option>
+                                    <option>Pakansari</option>
+                                </select>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- TODO: handle passing value dari sini ke page berikutnya -->
+                    <button class="btn btn-outline-secondary mt-5" type="submit" value="Submit">Submit</button>
+    
+                    </form>  
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="form-peminjaman-stadium.js"></script>
+{% include 'footer.html' %}
+{% endblock content %}

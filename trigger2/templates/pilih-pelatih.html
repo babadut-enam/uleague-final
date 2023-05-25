@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Peminjaman Stadium</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% include 'navbar/navbar-manajer.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4">
+                    <h2 class="fw-bold mb-2">Pilih Pelatih</h2>
+                    <p class="text-black-50 mb-5">Pilih pelatih yang tersedia untuk melatih tim Anda</p>
+                      <form method="POST" action="">
+                        <div class="form-group">
+                          <select class="form-control" id="pilihPelatih">
+                            <option disabled selected value="">Pilih pelatih yang ingin didaftarkan</option>                            
+                            <option>John Doe - Taktik</option>
+                            <option>Doe John - Teknik</option>
+                            <option>Radit A - Teknik</option>
+                            <option>Arya DK - Taktik</option>
+                            <option>Daffa F - Keduanya</option>
+                            <option>Jingga M - Keduanya</option>
+                          </select>
+                        </div>
+
+                        <!-- pake dropdown styled -->
+                        <!-- <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown-button">
+                            Pilih pelatih yang ingin didaftarkan
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdown-button">
+                            <li><a class="dropdown-item" href="#">John Doe - Taktik</a></li>
+                            <li><a class="dropdown-item" href="#">Doe John - Teknik</a></li>
+                            <li><a class="dropdown-item" href="#">Radit A - Teknik</a></li>
+                            <li><a class="dropdown-item" href="#">Arya DK - Taktif</a></li>
+                            <li><a class="dropdown-item" href="#">Daffa F - Keduanya</a></li>
+                            <li><a class="dropdown-item" href="#">Jingga M - Keduanya</a></li>
+                          </ul>
+                        </div> -->
+                        <br>
+                        <a class="btn btn-outline-secondary mt-5" href="{% url 'trigger2:mengelola-tim' %}" value="kembali">Kembali</a>
+                        <button class="btn btn-primary mt-5" type="submit" value="Submit">Submit</button>
+                      </form>
+                      
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+  {% endblock content %}

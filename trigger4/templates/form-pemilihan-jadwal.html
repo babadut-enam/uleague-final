@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Form Peminjaman Stadium</title>
+    <link rel="stylesheet" href="">
+    {% include 'navbar/navbar-panitia.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4 pb-5">
+
+                    <h2 class="fw-bold mb-2 text-uppercase">Pembuatan Pertandingan</h2>
+                    <p class="text-black-50 mb-5">Pilih stadium dan tanggal yang tersedia</p>
+                    <form method="POST" action="">
+                    <div class="form-group">
+                        <select class="form-control" id="pilihPelatih">
+                            <option disabled selected value="">Pilih Stadium</option>                            
+                            <option>Gelora Bung Karno</option>
+                            <option>Bandung Lautan Api</option>
+                            <option>Pakansari</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="tanggal">Tanggal:</label>
+                        <input type="date" id="tanggal" name="tanggal">
+                    </div>
+
+
+                    <div class="form-group mt-4">
+                        <!-- <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th colspan="2">List Waktu Stadium Gelora Bung Karno
+                                </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><b>List Waktu</b></td>
+                              <td><b>Action</b></td>
+                            </tr>
+                            <tr>
+                              <td>10:00 - 12:00</td>
+                              <td><button type="button" class="btn btn-secondary btn-sm">Next</button></td>
+                            </tr>
+                            <tr>
+                              <td>13:00 - 15:00</td>
+                              <td>Dipesan</td>
+                            </tr>
+                            <tr>
+                              <td>16:00 - 18:00</td>
+                              <td><button type="button" class="btn btn-secondary btn-sm">Next</button></td>
+                            </tr>
+                          </tbody>
+                        </table> -->
+                    </div>
+                    
+                    <!-- TODO: handle passing value dari sini ke page berikutnya -->
+                    <button class="btn btn-outline-secondary mt-5" type="submit" value="Submit">Next</button>
+    
+                    </form>  
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="form-peminjaman-stadium.js"></script>
+{% include 'footer.html' %}
+{% endblock content %}

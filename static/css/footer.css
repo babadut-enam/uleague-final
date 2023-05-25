@@ -1,0 +1,14 @@
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #f4f5f0;
+}
+.fa {
+    color: black;
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}

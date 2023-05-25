@@ -1,0 +1,9 @@
+section {
+    min-height: calc(100vh - 56px); /* assuming your navbar is 56px tall */
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+.card {
+    width: 100%;
+}

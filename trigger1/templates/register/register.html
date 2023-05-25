@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+<title>Register</title>
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock meta %}
+
+{% block content %}  
+<section class="vh-100 bg-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5 text-center">
+                <div class="mb-4">
+                  <a href="{% url 'trigger1:home' %}"><img src="/static/img/database.png" width="50" height="auto"></a>
+                </div>
+
+                <h2 class="fw-bold mb-2 text-uppercase">Create an account</h2>
+                <p class="text-black-50 mb-5">Please enter a new username and a password!</p>
+
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-outline-secondary mt-2" style="margin-right: 10px;" href="{% url 'trigger1:register-manajer' %}" type="button" value="Manajer">Manajer</a> 
+                  <a class="btn btn-outline-secondary mt-2" href="{% url 'trigger1:register-penonton' %}" type="button" value="Penonton">Penonton</a> 
+                  <a class="btn btn-outline-secondary mt-2" style="margin-left: 10px;" href="{% url 'trigger1:register-panitia' %}" type="button" value="Panitia">Panitia</a> 
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,5 @@
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(100%);top: auto;
+    bottom: 20px;
+}

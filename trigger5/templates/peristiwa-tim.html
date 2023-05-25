@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Manage Pertandingan</title>
+    <link rel="stylesheet" href="{% static 'css/peminjaman_stadium.css' %}">
+    {% include 'navbar/navbar-panitia.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-7 col-lg-6 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4">
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                              <th colspan="2">Peristiwa Tim UI FC</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><b>Nama Pemain</b></td>
+                              <td><b>Peristiwa</b></td>
+                            </tr>
+                            <tr>
+                              <td>John Doe</td>
+                              <td>assist</td>
+                            </tr>
+                            <tr>
+                              <td>Jingga M</td>
+                              <td>gol</td>
+                            </tr>
+                            <tr>
+                              <td>Radit A</td>
+                              <td>kartu kuning</td>
+                            </tr>
+                            <tr>
+                              <td>Arya DK</td>
+                              <td>kartu kuning</td>
+                            </tr>
+                            <tr>
+                              <td>Daffa F</td>
+                              <td>gol</td>
+                            </tr>
+                          </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+  {% include 'footer.html' %}
+  {% endblock content %}

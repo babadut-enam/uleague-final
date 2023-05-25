@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Form Pembelian Tiket</title>
+    <link rel="stylesheet" href="">
+    {% include 'navbar/navbar-penonton.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4 pb-5">
+
+                    <h2 class="fw-bold mb-2 text-uppercase">Pembelian Tiket</h2>
+                    <p class="text-black-50 mb-5">Pilih Tiket dan Tanggal Pemesanan</p>
+                    <form method="POST" action="">
+                    <p>Pilih Stadium:</p>
+                    <div class="dropdown-center">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gelora Bung Karno
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Pilih Stadium</a></li>
+                            <li><a class="dropdown-item" href="#">Gelora Bung Karno</a></li>
+                            <li><a class="dropdown-item" href="#">Bandung Lautan Api</a></li>
+                        </ul>
+                    </div>
+                    <br><br>
+                    <p>Pilih Tanggal:</p>
+                    <div class="dropdown-center mt-2">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pilih Tanggal
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Pilih Tanggal</a></li>
+                            <li><a class="dropdown-item" href="#">13 April 2023</a></li>
+                        </ul>
+                    </div>
+        
+                    <button class="btn btn-outline-secondary mt-5" href="{% url 'trigger6:pembelian_tiket2' %}" type="submit" value="Next">Next</button>
+    
+                    </form>  
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+{% include 'footer.html' %}
+{% endblock content %}

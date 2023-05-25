@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+    <title>Peristiwa Tim 2</title>
+    <link rel="stylesheet" href="">
+    {% include 'navbar/navbar-panitia.html' %}
+{% endblock meta %}
+
+{% block content %}
+<section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4 pb-5">
+
+                    <h2 class="fw-bold mb-2 text-uppercase">Peristiwa Tim 2</h2>
+                    <p class="text-black-50 mb-5">Tentukan peristiwa untuk tim: BINUS FC</p>
+                    <form method="POST" action="">
+                      <table class="table table-hover">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nama Pemain</th>
+                            <th scope="col">Peristiwa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>player 1</td>
+                              <td>
+                                <div class="dropdown-center">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Assist
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">None</a></li>
+                                      <li><a class="dropdown-item" href="#">Kartu Kuning</a></li>
+                                      <li><a class="dropdown-item" href="#">Kartu Merah</a></li>
+                                      <li><a class="dropdown-item" href="#">Goal</a></li>
+                                      <li><a class="dropdown-item" href="#">Assist</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>player 2</td>
+                              <td>
+                                <div class="dropdown-center">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Goal
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">None</a></li>
+                                      <li><a class="dropdown-item" href="#">Kartu Kuning</a></li>
+                                      <li><a class="dropdown-item" href="#">Kartu Merah</a></li>
+                                      <li><a class="dropdown-item" href="#">Goal</a></li>
+                                      <li><a class="dropdown-item" href="#">Assist</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                              <tr>
+                                <td>player 3</td>
+                                <td>
+                                  <div class="dropdown-center">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        None
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">None</a></li>
+                                        <li><a class="dropdown-item" href="#">Kartu Kuning</a></li>
+                                        <li><a class="dropdown-item" href="#">Kartu Merah</a></li>
+                                        <li><a class="dropdown-item" href="#">Goal</a></li>
+                                        <li><a class="dropdown-item" href="#">Assist</a></li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tr>
+                        </tbody>
+                      </table>
+        
+                    <button class="btn btn-outline-secondary mt-5" href="{% url 'trigger5:mulai_pertandingan' %}" type="submit" value="Submit">Submit</button>
+    
+                    </form>  
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+{% include 'footer.html' %}
+{% endblock content %}
